@@ -1,24 +1,11 @@
-# README
+# Github Repos
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Setup
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. clone the project
+2. bundle install
+3. cp config/application.yml.sample config/application.yml
+4. add Github Token to application.yml file
+5. rails db:create
+6. rails db:migrate
+7. go to localohost:3000
