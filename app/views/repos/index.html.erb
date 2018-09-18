@@ -3,6 +3,7 @@
     <h3 class="header-text">My Github Favorite</h3>
   </div>
 </div>
+
 <div class="row ml-5">
   <div class="col-5 ml-5">
     <%= form_tag(repos_path, method: 'get' ) do %>
@@ -13,7 +14,11 @@
       <%= submit_tag("Search", class: "btn btn-primary") %>
     </div>
     <% end %>
+  </div>
+</div>
 
+<div class="row ml-5">
+  <div class="col-5 ml-5">
     <% if @repos.present? %>
       <table class="table table-borderless mt-5">
         <thead>
