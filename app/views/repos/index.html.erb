@@ -30,7 +30,18 @@
               <td><%= re[0] %></td>
               <td><%= re[1] %></td>
               <td><%= re[2] %></td>
-              <td><%= link_to "Add", re[3] %></td>
+              <td>
+                <%=
+                  link_to "Add",
+                  favorites_path(
+                    name: re[0],
+                    language: re[1],
+                    latest_tag: re[2]
+                  ),
+                  remote: true,
+                  method: :post
+                %>
+              </td>
             </tr>
           <% end %>
         </tbody>
@@ -38,5 +49,8 @@
     <% end %>
   </div>
   <div class="col-6">
+    <div id="favorite-repos">
+      <%= render "favorites/favorite", favorites: @favorites %>
+    </div>
   </div>
 </div>

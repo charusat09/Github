@@ -1,0 +1,27 @@
+<table class="table table-borderless mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Language</th>
+      <th scope="col">Latest Tag</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @favorites.each do  |re| %>
+      <tr>
+        <td><%= re.name %></td>
+        <td><%= re.language %></td>
+        <td><%= re.latest_tag %></td>
+        <td>
+          <%=
+            link_to "Remove",
+            favorite_path(re),
+            remote: true,
+            method: :delete
+          %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
